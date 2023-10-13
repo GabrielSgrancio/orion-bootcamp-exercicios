@@ -71,6 +71,7 @@ console.log(lista);
 updateBioOrName(3, "Novo Nome", "Nova Bio");
 console.log(lista);
 
+/*paradigma imperativo*/
 function paradigmaImperativo() {
     var bio = getBio(1);
     console.log(bio);
