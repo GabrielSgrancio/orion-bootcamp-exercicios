@@ -1,6 +1,5 @@
 /**
  * Conta o número de vogais em uma palavra.
- *
  * @param palavra - A palavra para contar as vogais.
  */
 function contarVogais() {
