@@ -77,7 +77,7 @@ function updateBioOrName(id: number, newName?: string, newBio?: string): void {
 
 
 /*Paradigma imperativo*/
-function paradigmaImperativo() {
+function paradigmaImperativo(): void {
     const bio = getBio(1);
     console.log(bio); 
     
