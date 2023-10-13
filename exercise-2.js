@@ -8,6 +8,7 @@ var lista = [
  * Retorna a biografia da pessoa com o ID fornecido.
  *
  * @param id - O ID da pessoa.
+ *
  * @returns A biografia da pessoa, se encontrada. Caso contrário, retorna undefined.
  */
 function getBio(id) {
@@ -22,6 +23,7 @@ function getBio(id) {
  * Retorna o nome da pessoa com o ID fornecido.
  *
  * @param id - O ID da pessoa.
+ *
  * @returns O nome da pessoa, se encontrada. Caso contrário, retorna undefined.
  */
 function getName(id) {
@@ -63,15 +65,7 @@ function updateBioOrName(id, newName, newBio) {
         }
     }
 }
-/*Teste no paradigma funcional*/
-console.log(getBio(1));
-console.log(getName(3));
-deleteItem(2);
-console.log(lista);
-updateBioOrName(3, "Novo Nome", "Nova Bio");
-console.log(lista);
-
-/*paradigma imperativo*/
+/*Paradigma imperativo*/
 function paradigmaImperativo() {
     var bio = getBio(1);
     console.log(bio);
@@ -83,3 +77,33 @@ function paradigmaImperativo() {
     console.log(lista);
 }
 paradigmaImperativo();
+/*Paradigma funcional*/
+var getBioFuncional = function (id) {
+    var pessoa = lista.find(function (item) { return item.id === id; });
+    return pessoa === null || pessoa === void 0 ? void 0 : pessoa.bio;
+};
+var getNameFuncional = function (id) {
+    var pessoa = lista.find(function (item) { return item.id === id; });
+    return pessoa === null || pessoa === void 0 ? void 0 : pessoa.name;
+};
+var deleteItemFuncional = function (id) {
+    var updatedList = lista.filter(function (item) { return item.id !== id; });
+    return updatedList;
+};
+var updateBioOrNameFuncional = function (id, newName, newBio) {
+    var updatedList = lista.map(function (item) {
+        if (item.id === id) {
+            if (newName)
+                item.name = newName;
+            if (newBio)
+                item.bio = newBio;
+        }
+        return item;
+    });
+    return updatedList;
+};
+/* Teste no paradigma funcional */
+console.log(getBioFuncional(1));
+console.log(getNameFuncional(3));
+console.log(deleteItemFuncional(2));
+console.log(updateBioOrNameFuncional(3, "Novo Nome", "Nova Bio"));

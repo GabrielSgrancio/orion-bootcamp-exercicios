@@ -15,6 +15,7 @@ const lista: Pessoa[] = [
  * Retorna a biografia da pessoa com o ID fornecido.
  *
  * @param id - O ID da pessoa.
+ * 
  * @returns A biografia da pessoa, se encontrada. Caso contrário, retorna undefined.
  */
 function getBio(id: number): string | undefined {
@@ -30,6 +31,7 @@ function getBio(id: number): string | undefined {
  * Retorna o nome da pessoa com o ID fornecido.
  *
  * @param id - O ID da pessoa.
+ * 
  * @returns O nome da pessoa, se encontrada. Caso contrário, retorna undefined.
  */
 function getName(id: number): string | undefined {
@@ -72,20 +74,14 @@ function updateBioOrName(id: number, newName?: string, newBio?: string): void {
     }
 }
 
-/*Teste no paradigma funcional*/
-console.log(getBio(1)); 
-console.log(getName(3)); 
-deleteItem(2);
-console.log(lista); 
-updateBioOrName(3, "Novo Nome", "Nova Bio");
-console.log(lista); 
+
 
 /*Paradigma imperativo*/
 function paradigmaImperativo() {
-    let bio = getBio(1);
+    const bio = getBio(1);
     console.log(bio); 
     
-    let name = getName(3);
+    const name = getName(3);
     console.log(name); 
     
     deleteItem(2);
@@ -96,3 +92,39 @@ function paradigmaImperativo() {
 }
 
 paradigmaImperativo();
+
+
+
+/*Paradigma funcional*/
+
+const getBioFuncional = (id: number): string | undefined => {
+    const pessoa = lista.find(item => item.id === id);
+    return pessoa?.bio;
+};
+
+const getNameFuncional = (id: number): string | undefined => {
+    const pessoa = lista.find(item => item.id === id);
+    return pessoa?.name;
+};
+
+const deleteItemFuncional = (id: number): Pessoa[] => {
+    const updatedList = lista.filter(item => item.id !== id);
+    return updatedList;
+};
+
+const updateBioOrNameFuncional = (id: number, newName?: string, newBio?: string): Pessoa[] => {
+    const updatedList = lista.map(item => {
+        if (item.id === id) {
+            if (newName) item.name = newName;
+            if (newBio) item.bio = newBio;
+        }
+        return item;
+    });
+    return updatedList;
+};
+
+/* Teste no paradigma funcional */
+console.log(getBioFuncional(1)); 
+console.log(getNameFuncional(3)); 
+console.log(deleteItemFuncional(2)); 
+console.log(updateBioOrNameFuncional(3, "Novo Nome", "Nova Bio"));
