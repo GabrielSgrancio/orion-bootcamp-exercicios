@@ -1,8 +1,6 @@
 /**
  * Conta o número de vogais em uma palavra.
- *
  * @param palavra - A palavra para contar as vogais.
- * @returns {Number} O número de vogais na palavra .
  */
 function contarVogais() {
     const palavraElement = document.getElementById("inputPalavra") as HTMLInputElement;
