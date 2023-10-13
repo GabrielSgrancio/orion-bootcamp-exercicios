@@ -4,7 +4,6 @@
  * @param palavra - A palavra para contar as vogais.
  * @returns O número de vogais na palavra (contador).
  */
-
 function contarVogais(palavra) {
     var vogais = 'aeiouAEIOU';
     var contador = 0;
@@ -15,13 +14,9 @@ function contarVogais(palavra) {
     }
     return contador;
 }
-
-/* 
-* Exemplo de uso da função :
-*
-*/
-var palavraExemplo = 'gabriel';
+/**
+ * @example
+ */
+var palavraExemplo = "gAbriel";
 var quantidadeDeVogais = contarVogais(palavraExemplo);
 console.log("A palavra \"".concat(palavraExemplo, "\" possui ").concat(quantidadeDeVogais, " vogais."));
-
-
