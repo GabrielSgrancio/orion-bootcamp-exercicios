@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista </title>
+    <link rel="stylesheet" type="text/css" href="styles-exercicio2.css" />
+   
+</head>
+<body>
+
+    <div class = "top-menu">
+        <a href = "../exercicio1/exercicio1.html">Exercício 1</a> 
+        <a href="../index.html">Exercício 2</a> 
+    </div>
+
+    <h1>Exercício 2</h1>
+
+
+    <label for="idInput">ID:</label>
+    <input type="text" id="idInput" placeholder="Digite o ID">
+
+    <label for="nameInput">Novo Nome:</label>
+    <input type="text" id="nameInput" placeholder="Novo Nome">
+
+    <label for="bioInput">Nova Bio:</label>
+    <input type="text" id="bioInput" placeholder="Nova Bio">
+
+    <button onclick="getBio()">Obter Bio</button>
+    <button onclick="deleteItem()">Deletar Item</button>
+    <button onclick="updateBioOrName()">Atualizar Nome/Bio</button>
+
+    <div id="resultado"></div>
+
+    <h2>Lista</h2>
+    <ul id="listaPersonalidades"></ul>
+
+    <div class ="log">
+        <table>
+            <thead>
+                <tr>
+                    <th>Commit</th>
+                    <th>Autor</th>
+                    <th>Data</th>
+                    <th>Mensagem</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>ed8c6549bwf9</td>
+                    <td>gabrielsgrancio &lt;biel.sgrancio@hotmail.com&gt;</td>
+                    <td>Fri Oct 13 17:27:44 2023 -0300</td>
+                    <td>paradigma imperativo &amp;&amp; funcional</td>
+                </tr>
+                <tr>
+                    <td>44d2e31e17ac996b496ad3d35ad5cc5079086532</td>
+                    <td>gabrielsgrancio &lt;biel.sgrancio@hotmail.com&gt;</td>
+                    <td>Fri Oct 13 13:57:31 2023 -0300</td>
+                    <td>exercicio 2 concluido</td>
+                </tr>
+                <tr>
+                    <td>8342defa7f369bef64c6efd08c9acc8a7b392faa</td>
+                    <td>Gabriel Sgrâncio Melo Correia &lt;biel.sgrancio@hotmail.com&gt;</td>
+                    <td>Wed Oct 11 16:55:14 2023 -0300</td>
+                    <td>Update README.md</td>
+                </tr>
+                <tr>
+                    <td>5160e0022e1e978419adfb7a3684d322ec09d361</td>
+                    <td>Gabriel Sgrâncio Melo Correia &lt;biel.sgrancio@hotmail.com&gt;</td>
+                    <td>Sat Oct 7 16:14:08 2023 -0300</td>
+                    <td>Initial commit</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="exercicio2.js"></script>
+</body>
+</html>
