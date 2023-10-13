@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de Vogais</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            order: 1;
+            margin-top: 40px;
+            
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        input {
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        p {
+            color: #333;
+            font-size: 18px;
+        }
+
+        
+        .top-menu {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #45a049;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 30px;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        }
+
+        .top-menu a {
+        color: white;
+        text-decoration: none;
+        }
+
+        .log {
+            text-align: center;
+            margin-bottom: 0px;
+            order: 2;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top:50px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 14px;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+    </style>
+</head>
+<body>
+
+    <div class = "top-menu">
+        <a href = "exercicio1.html">Exercício 1</a> 
+        <a href="exercicio2.html">Exercício 2</a> 
+    </div>
+
+    <div class="container">
+        <h1>Contador de Vogais</h1>
+        <input type="text" id="inputPalavra" placeholder="Digite uma palavra">
+        <button onclick="contarVogais()">Contar Vogais</button>
+        <p id="resultado"></p>
+    </div>
+
+    <div class = "log" >
+        <h1>Histórico de Commits</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Commit</th>
+                    <th>Autor</th>
+                    <th>Data</th>
+                    <th>Mensagem</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>cdffb99c465df812020081be572c11769d9a2373</td>
+                    <td>gabrielsgrancio &lt;biel.sgrancio@hotmail.com&gt;</td>
+                    <td>Fri Oct 13 17:23:52 2023 -0300</td>
+                    <td>problema da tag script e acentos resolvido</td>
+                </tr>
+                <tr>
+                    <td>1ba31b7b2a8ed55e7792f18eab9f90ae442468bc</td>
+                    <td>gabrielsgrancio &lt;biel.sgrancio@hotmail.com&gt;</td>
+                    <td>Fri Oct 13 10:50:47 2023 -0300</td>
+                    <td>correção do exercicio 1</td>
+                </tr>
+                <tr>
+                    <td>32783238eabc435182bb82fe45930919bff4130b</td>
+                    <td>gabrielsgrancio &lt;biel.sgrancio@hotmail.com&gt;</td>
+                    <td>Wed Oct 11 22:15:52 2023 -0300</td>
+                    <td>Merge branch 'develop' of github.com:GabrielSgrancio/orion-bootcamp-exercicios into feature/exercicio1 resolvendo erro</td>
+                </tr>
+                <tr>
+                    <td>cc63d4fcd7d152e39b98eda1cde5e8f38c583de0</td>
+                    <td>gabrielsgrancio &lt;biel.sgrancio@hotmail.com&gt;</td>
+                    <td>Wed Oct 11 18:36:11 2023 -0300</td>
+                    <td>Resolução do exercício 1</td>
+                </tr>
+                <tr>
+                    <td>8342defa7f369bef64c6efd08c9acc8a7b392faa</td>
+                    <td>Gabriel Sgrâncio Melo Correia &lt;biel.sgrancio@hotmail.com&gt;</td>
+                    <td>Wed Oct 11 16:55:14 2023 -0300</td>
+                    <td>Update README.md</td>
+                </tr>
+                <tr>
+                    <td>5160e0022e1e978419adfb7a3684d322ec09d361</td>
+                    <td>Gabriel Sgrâncio Melo Correia &lt;biel.sgrancio@hotmail.com&gt;</td>
+                    <td>Sat Oct 7 16:14:08 2023 -0300</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        function contarVogais() {
+            const palavra = document.getElementById("inputPalavra").value;
+            const vogais = 'aeiouAEIOU';
+            let contador = 0;
+
+            for (let i = 0; i < palavra.length; i++) {
+                if (vogais.includes(palavra[i])) {
+                    contador++;
+                }
+            }
+
+            document.getElementById("resultado").innerText = `A palavra "${palavra}" possui ${contador} vogais.`;
+        }
+    </script>
+</body>
+</html>
