@@ -7,32 +7,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contador de Vogais</title>
 </head>
+
 <body>
     <style>
-     body {background-color:#04031b}
-     h1 {color: white;}
+     body {
+        background-color:#b5b5ce;
+        text-align: center;
+    }
+     h1 {color: rgb(0, 0, 0);}
      button {background-color: #4CAF50;}
     </style>
+    <script src = "exercicio-1.js"></script>
     
     <h1>Contador de Vogais</h1>
     <input type="text" id="inputPalavra" placeholder="Digite uma palavra">
     <button onclick="contarVogais()">Contar Vogais</button>
     <p id="resultado"></p>
 
-    <script>
-        function contarVogais() {
-            const palavra = document.getElementById("inputPalavra").value;
-            const vogais = 'aeiouAEIOU';
-            let contador = 0;
-
-            for (let i = 0; i < palavra.length; i++) {
-                if (vogais.includes(palavra[i])) {
-                    contador++;
-                }
-            }
-
-            document.getElementById("resultado").innerText = `A palavra "${palavra}" possui ${contador} vogais.`;
-        }
-    </script>
 </body>
 </html>

@@ -4,15 +4,19 @@
  * @param palavra - A palavra para contar as vogais.
  * @returns O número de vogais na palavra (contador).
  */
-function contarVogais(palavra) {
+function contarVogais() {
+    var palavraElement = document.getElementById("inputPalavra");
+    var resultadoElement = document.getElementById("resultado");
+    var palavra = palavraElement.value;
+    var palavraClean = palavra.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
     var vogais = 'aeiouAEIOU';
     var contador = 0;
-    for (var i = 0; i < palavra.length; i++) {
-        if (vogais.includes(palavra[i])) {
+    for (var i = 0; i < palavraClean.length; i++) {
+        if (vogais.includes(palavraClean[i])) {
             contador++;
         }
     }
-    return contador;
+    resultadoElement.innerText = "A palavra \"".concat(palavra, "\" possui ").concat(contador, " vogais.");
 }
 /**
  * @example
