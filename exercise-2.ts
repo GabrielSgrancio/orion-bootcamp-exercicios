@@ -74,9 +74,11 @@ function updateBioOrName(id: number, newName?: string, newBio?: string): void {
     }
 }
 
-
-
-/*Paradigma imperativo*/
+/**
+ * Paradigma Imperativo
+ *
+ * Executa operações utilizando o paradigma imperativo.
+ */
 function paradigmaImperativo(): void {
     const bio = getBio(1);
     console.log(bio); 
@@ -93,25 +95,51 @@ function paradigmaImperativo(): void {
 
 paradigmaImperativo();
 
-
-
-/*Paradigma funcional*/
-
+/**
+ * Retorna a biografia da pessoa com o ID fornecido no paradigma funcional.
+ *
+ * @param id - O ID da pessoa.
+ * 
+ * @returns A biografia da pessoa, se encontrada. Caso contrário, retorna undefined.
+ */
 const getBioFuncional = (id: number): string | undefined => {
     const pessoa = lista.find(item => item.id === id);
     return pessoa?.bio;
 };
 
+/**
+ * Retorna o nome da pessoa com o ID fornecido no paradigma funcional.
+ *
+ * @param id - O ID da pessoa.
+ * 
+ * @returns O nome da pessoa, se encontrada. Caso contrário, retorna undefined.
+ */
 const getNameFuncional = (id: number): string | undefined => {
     const pessoa = lista.find(item => item.id === id);
     return pessoa?.name;
 };
 
+/**
+ * Apaga uma pessoa da lista com o ID fornecido no paradigma funcional.
+ *
+ * @param id - O ID da pessoa a ser apagada.
+ * 
+ * @returns Uma nova lista de pessoas após a remoção.
+ */
 const deleteItemFuncional = (id: number): Pessoa[] => {
     const updatedList = lista.filter(item => item.id !== id);
     return updatedList;
 };
 
+/**
+ * Altera a biografia ou o nome da pessoa com o ID fornecido no paradigma funcional.
+ *
+ * @param id - O ID da pessoa a ser alterada.
+ * @param newName - O novo nome (opcional).
+ * @param newBio - A nova biografia (opcional).
+ * 
+ * @returns Uma nova lista de pessoas após a alteração.
+ */
 const updateBioOrNameFuncional = (id: number, newName?: string, newBio?: string): Pessoa[] => {
     const updatedList = lista.map(item => {
         if (item.id === id) {
